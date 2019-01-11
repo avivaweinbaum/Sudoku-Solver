@@ -3,6 +3,7 @@ public class Board {
 	private int[][] board;
 
 	public int[][] fill() {
+		board = new int[9][9];
 		while(column < 9) {
 			while(row < 9) {
 				//we will actually need two while loops, one to iterate through each row and one to iterate through all columns
@@ -62,7 +63,7 @@ public class Board {
 
 	public static checkBox(int i, int j) {
 		whichBox(i, j);
-
+		
 	}
 
 	public int whichBox(int i, int j) {
