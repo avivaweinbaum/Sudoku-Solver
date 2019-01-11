@@ -3,16 +3,23 @@ public class Board {
 	private int[][] board;
 
 	public int[][] fill() {
-		while(notfull()){
-			int row = 0;
-			int column = 0;
+		while(column < 9){
+			while(row < 9{
+				//we will actually need two while loops, one to iterate through each row and one to iterate through all columns
+				int row = 0;
+				int column = 0;
 
-			int[row][column] = //random math int?
+				int[row][column] = //random math int?
 
-			checkHorizontal(row);
-			checkvertical(column);
-			checkbox();
-		}
+				checkHorizontal(row);
+				checkvertical(column);
+				checkbox();
+
+				row++;
+				column;
+			}
+		column++;
+	}
 
 		//return board
 
