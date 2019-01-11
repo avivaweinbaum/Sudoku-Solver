@@ -26,11 +26,38 @@ public class Board {
 
 	}
 
-	public static checkHorizontal(int i) {
-
+	public Boolean checkHorizontal(int i) {
+		//check a specific row value
+		int values[] = {0,1,2,3,4,5,6,7,8,9};
+		int j = 0;
+		while(j < 9){
+			int value = board[i][j];
+			j++;
+			if(values[value] == value){
+				values[value] = 0;
+			}
+			else{
+				return False;
+			}
+		}
+		return True;
 	}
 
 	public static checkVertical(int i) {
+		//check a specific column value
+		int values[] = {0,1,2,3,4,5,6,7,8,9};
+		int j = 0;
+		while(j < 9){
+			int value = board[j][i];
+			j++;
+			if(values[value] == value){
+				values[value] = 0;
+			}
+			else{
+				return False;
+			}
+		}
+		return True;
 
 	}
 
