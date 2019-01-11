@@ -14,13 +14,10 @@ public class Board {
 			while(row < 9) {
 				//we will actually need two while loops, one to iterate through each row and one to iterate through all columns
 				board[row][column] = (int)(Math.random()*9)+1; //random math int?
-
-				//NEED to add reverse value is fail!!!!!
-				checkHorizontal(row);
-				checkVertical(column);
-				checkBox(row, column);
-
-				row++;
+				
+				if(checkHorizontal(row) && checkVertical(column) && checkBox(row, column)){
+					row++;
+				}
 			}
 		column++;
 		row = 0;
