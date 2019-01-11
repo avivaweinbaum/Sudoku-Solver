@@ -65,7 +65,13 @@ public class Board {
 	}
 
 	public static checkBox(int i, int j) {
-		whichBox(i, j);
+		int boxnumber = whichBox(i, j);
+		int rowvalue[] = {-1,0,3,6,0,3,6,0,3,6};
+		int columnvalue[] = {-1,0,0,0,3,3,3,6,6,6};
+
+		int startrow = rowvalue[boxnumber];
+		int startcolumn = columnvalue[boxnumber];
+
 		
 	}
 
