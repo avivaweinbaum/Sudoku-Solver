@@ -2,8 +2,11 @@ public class Board {
 
 	private int[][] board;
 
-	public int[][] fill() {
+	public Board() {
 		board = new int[9][9];
+	}
+
+	public int[][] fill() {
 		while(column < 9) {
 			while(row < 9) {
 				//we will actually need two while loops, one to iterate through each row and one to iterate through all columns
