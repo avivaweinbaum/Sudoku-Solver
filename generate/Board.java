@@ -19,6 +19,7 @@ public class Board {
 				column;
 			}
 		column++;
+		row = 0;
 	}
 
 		//return board
