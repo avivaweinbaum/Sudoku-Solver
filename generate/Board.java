@@ -12,6 +12,7 @@ public class Board {
 
 				int[row][column] = (int)(Math.random()*9)+1; //random math int?
 
+				//NEED to add reverse value is fail!!!!!
 				checkHorizontal(row);
 				checkVertical(column);
 				checkBox(row, column);
@@ -69,6 +70,8 @@ public class Board {
 		int startrow = rowvalue[boxnumber];
 		int startcolumn = columnvalue[boxnumber];
 
+
+
 		
 	}
 
@@ -86,6 +89,21 @@ public class Board {
 		else if  (x == 3 && y == 2) { return 8 }
 		else if  (x == 3 && y == 3) { return 9 }
 
+	}
+	
+	public static printBoard(){
+		int i = 0;
+		int j = 0;
+		while(j < 9){
+			while(i < 9){
+				System.out.print(board[j][i]);
+				i++;
+				System.out.print(" ");
+			}
+			System.out.print("\n");
+			j++;
+			i = 0;
+		}
 	}
 
 }
