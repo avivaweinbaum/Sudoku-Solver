@@ -29,7 +29,7 @@ public class Board {
 
 	}
 
-	public Boolean checkHorizontal(int i) {
+	public boolean checkHorizontal(int i) {
 		//check a specific row value
 		int values[] = {0,1,2,3,4,5,6,7,8,9};
 		int j = 0;
@@ -40,13 +40,13 @@ public class Board {
 				values[value] = 0;
 			}
 			else{
-				return False;
+				return false;
 			}
 		}
-		return True;
+		return true;
 	}
 
-	public static checkVertical(int i) {
+	public boolean checkVertical(int i) {
 		//check a specific column value
 		int values[] = {0,1,2,3,4,5,6,7,8,9};
 		int j = 0;
@@ -57,25 +57,39 @@ public class Board {
 				values[value] = 0;
 			}
 			else{
-				return False;
+				return false;
 			}
 		}
-		return True;
+		return true;
 
 	}
 
-	public static checkBox(int i, int j) {
+	public boolean checkBox(int i, int j) {
 		int boxnumber = whichBox(i, j);
+		int value = board[i][j];
+
 		int rowvalue[] = {-1,0,3,6,0,3,6,0,3,6};
 		int columnvalue[] = {-1,0,0,0,3,3,3,6,6,6};
 
 		int startrow = rowvalue[boxnumber];
 		int startcolumn = columnvalue[boxnumber];
 
+		for (int x = 0; x < 3; x++) {
+			for (int y = 0; y < 3; y++) {
+				if (board[i][j] != board[x][y]) {
+					if (board[x][y] == value) {
+						return false;
+					}
+				}
+			}
+		}
+		return true;
 		
 	}
 
 	public int whichBox(int i, int j) {
+		i++;
+		j++;
 		int x = (i-(i%3))/3;
 		int y = (j-(j%3))/3;
 
