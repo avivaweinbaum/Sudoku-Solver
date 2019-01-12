@@ -13,7 +13,7 @@ public class Board {
 		while(column < 9) {
 			while(row < 9) {
 				//we will actually need two while loops, one to iterate through each row and one to iterate through all columns
-				board[row][column] = (int)(Math.random()*9)+1; //random math int?
+				board[row][column] = (int)((Math.random()*9)+1); //random math int?
 				
 				if(checkHorizontal(row) && checkVertical(column) && checkBox(row, column)){
 					row++;
@@ -99,7 +99,7 @@ public class Board {
 		else if  (x == 3 && y == 1) { return 7; }
 		else if  (x == 3 && y == 2) { return 8; }
 		else if  (x == 3 && y == 3) { return 9; }
-		else { return -1; }
+		else { return 0; }
 	}
 	
 	public boolean printBoard(){
